@@ -71,9 +71,13 @@ Para usar MySQL con la base `sakila` cargada desde `sakila-schema.sql` y `sakila
 DB_TYPE=mysql
 MYSQL_HOST=localhost
 MYSQL_USER=root
-MYSQL_PASSWORD=tu_password
+MYSQL_PASSWORD=
 MYSQL_DATABASE=sakila
 ```
+
+Con **XAMPP**: inicia MySQL en el panel de XAMPP, crea la base desde phpMyAdmin importando primero el esquema y luego
+`sakila-data.sql`. El `sakila-schema.sql` oficial es para MySQL 8 y falla en MariaDB por la línea `/*!80003 SRID 0 */`;
+bórrala antes de importarlo. En XAMPP el usuario es `root` y la contraseña va vacía (`MYSQL_PASSWORD=`).
 
 En ambos casos el agente solo puede leer: se rechaza cualquier sentencia que no sea un `SELECT`.
 
