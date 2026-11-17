@@ -75,9 +75,9 @@ MYSQL_PASSWORD=
 MYSQL_DATABASE=sakila
 ```
 
-Con **XAMPP**: inicia MySQL en el panel de XAMPP, crea la base desde phpMyAdmin importando primero el esquema y luego
-`sakila-data.sql`. El `sakila-schema.sql` oficial es para MySQL 8 y falla en MariaDB por la línea `/*!80003 SRID 0 */`;
-bórrala antes de importarlo. En XAMPP el usuario es `root` y la contraseña va vacía (`MYSQL_PASSWORD=`).
+Con **XAMPP**: inicia MySQL en el panel de XAMPP y en phpMyAdmin (pestaña Importar) importa primero
+`ai-backend/db/mysql/sakila-schema.sql` y luego `ai-backend/db/mysql/sakila-data.sql`. Ese esquema ya viene sin la línea
+`/*!80003 SRID 0 */` del original de MySQL 8, que MariaDB no acepta. En XAMPP el usuario es `root` y la contraseña va vacía (`MYSQL_PASSWORD=`).
 
 En ambos casos el agente solo puede leer: se rechaza cualquier sentencia que no sea un `SELECT`.
 
