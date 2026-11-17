@@ -30,7 +30,7 @@ practica6-agente-web/
 │   ├── db/sakila.db     Base Sakila convertida a SQLite (16 tablas, 16,044 rentas)
 │   └── .env.example     Cópialo como .env y pon ahí la API key de OpenRouter
 └── ai-frontend/
-    ├── index.html       Chat con botones de las 3 preguntas
+    ├── index.html       Interfaz del chat
     └── app.js
 ```
 
@@ -83,5 +83,5 @@ En ambos casos el agente solo puede leer: se rechaza cualquier sentencia que no 
 - "¿Qué clientes crees que están a punto de dejar el servicio porque llevan mucho tiempo sin alquilar ninguna película?"
 - "Hazme un análisis rápido de qué día de la semana hay más movimiento en las tiendas y cuánto dinero promedio se recauda en esos días."
 
-Están como botones en el chat. Nota sobre los datos: las rentas de Sakila son de 2005-2006, así que "mucho tiempo sin
+Se escriben directamente en el chat. Nota sobre los datos: las rentas de Sakila son de 2005-2006, así que "mucho tiempo sin
 alquilar" se mide contra la última fecha registrada en la base, no contra la fecha de hoy.

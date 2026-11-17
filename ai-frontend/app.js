@@ -104,11 +104,6 @@ function appendMessage(text, sender) {
     return messageDiv;
 }
 
-function preguntar(boton) {
-    document.getElementById('userInput').value = boton.textContent;
-    sendMessage();
-}
-
 function handleKeyPress(event) {
     if (event.key === 'Enter') {
         sendMessage();
